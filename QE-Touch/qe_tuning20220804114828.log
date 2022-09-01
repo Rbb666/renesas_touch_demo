@@ -1,0 +1,81 @@
+***** 2022/08/04 11:48:28 *****
+QE Version                                        :3.1.0.v20220401-0732
+Project Path                                      :D:\workspace\Github\rt-thread-master\rt-thread-sherman\bsp\renesas\ra2l1-cpk
+Configuration File                                :ra2l1cpk
+<< METHOD 0 >>
+[Button(self) 0]
+TS                                                : TS32,
+[Button(self) 1]
+TS                                                : TS33,
+[Button(self) 2]
+TS                                                : TS28,
+
+<<<< Tuning Type : Normal >>>>
+PCLKB Frequency (MHz)                             :24.000
+CTSU Operating Frequency (MHz)                    :24.000
+
+---------- Phase1 ----------
+<< METHOD 0 >>
+[TS28]
+Count Value                                       : 2715
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 18.854166
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
+[TS32]
+Count Value                                       : 2768
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 19.222221
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
+[TS33]
+Count Value                                       : 2174
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 15.097222
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
+
+---------- Phase2 ----------
+<< METHOD 0 >>
+[TS28]
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+CTSUSNUM                                          : 7
+CTSUSDPA                                          : 7
+CTSUSO                                            : 197
+
+[TS32]
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+CTSUSNUM                                          : 7
+CTSUSDPA                                          : 7
+CTSUSO                                            : 216
+
+[TS33]
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+CTSUSNUM                                          : 7
+CTSUSDPA                                          : 7
+CTSUSO                                            : 143
+
+
+---------- Phase3 ----------
+<< METHOD 0 >>
+[Button(self) 0]
+  << TS32 >>
+  Count Value (Off)                               : 15140
+  Count Value (On)                                : 17630
+  Threshold                                       : 1494
+  Hysteresis                                      : 74
+
+[Button(self) 1]
+  << TS33 >>
+  Count Value (Off)                               : 15376
+  Count Value (On)                                : 17611
+  Threshold                                       : 1341
+  Hysteresis                                      : 67
+
+[Button(self) 2]
+  << TS28 >>
+  Count Value (Off)                               : 15338
+  Count Value (On)                                : 17517
+  Threshold                                       : 1307
+  Hysteresis                                      : 65
+

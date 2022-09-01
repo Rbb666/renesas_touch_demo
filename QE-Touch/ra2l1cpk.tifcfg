@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ConfigurationInfoTable>
+        
+  
+  
+  <Version>2.2</Version>
+        
+  
+  
+  <McuName>R7FA2L1AxxxFM</McuName>
+        
+  
+  
+  <McuGroup>RA2L1</McuGroup>
+        
+  
+  
+  <TemplateInfoTable>
+                
+    
+    
+    <Comment/>
+                
+    
+    
+    <TouchIFSetting>
+                        
+      
+      
+      <ID>0</ID>
+                        
+      
+      
+      <HintID>0</HintID>
+                        
+      
+      
+      <Label>Button00</Label>
+                        
+      
+      
+      <Type>1</Type>
+                        
+      
+      
+      <Direction>1</Direction>
+                        
+      
+      
+      <Rectangle>
+                                
+        
+        
+        <X>75</X>
+                                
+        
+        
+        <Y>185</Y>
+                                
+        
+        
+        <Width>50</Width>
+                                
+        
+        
+        <Height>50</Height>
+                              
+      
+      
+      </Rectangle>
+                        
+      
+      
+      <TsInfo>
+                                
+        
+        
+        <Number>32</Number>
+                                
+        
+        
+        <Resistance>560</Resistance>
+                                
+        
+        
+        <TXRX>0</TXRX>
+                              
+      
+      
+      </TsInfo>
+                        
+      
+      
+      <CFC>0</CFC>
+                      
+    
+    
+    </TouchIFSetting>
+                
+    
+    
+    <TouchIFSetting>
+                        
+      
+      
+      <ID>1</ID>
+                        
+      
+      
+      <HintID>1</HintID>
+                        
+      
+      
+      <Label>Button01</Label>
+                        
+      
+      
+      <Type>1</Type>
+                        
+      
+      
+      <Direction>1</Direction>
+                        
+      
+      
+      <Rectangle>
+                                
+        
+        
+        <X>145</X>
+                                
+        
+        
+        <Y>185</Y>
+                                
+        
+        
+        <Width>50</Width>
+                                
+        
+        
+        <Height>50</Height>
+                              
+      
+      
+      </Rectangle>
+                        
+      
+      
+      <TsInfo>
+                                
+        
+        
+        <Number>33</Number>
+                                
+        
+        
+        <Resistance>560</Resistance>
+                                
+        
+        
+        <TXRX>0</TXRX>
+                              
+      
+      
+      </TsInfo>
+                        
+      
+      
+      <CFC>0</CFC>
+                      
+    
+    
+    </TouchIFSetting>
+                
+    
+    
+    <TouchIFSetting>
+                        
+      
+      
+      <ID>2</ID>
+                        
+      
+      
+      <HintID>2</HintID>
+                        
+      
+      
+      <Label>Button02</Label>
+                        
+      
+      
+      <Type>1</Type>
+                        
+      
+      
+      <Direction>1</Direction>
+                        
+      
+      
+      <Rectangle>
+                                
+        
+        
+        <X>215</X>
+                                
+        
+        
+        <Y>185</Y>
+                                
+        
+        
+        <Width>50</Width>
+                                
+        
+        
+        <Height>50</Height>
+                              
+      
+      
+      </Rectangle>
+                        
+      
+      
+      <TsInfo>
+                                
+        
+        
+        <Number>28</Number>
+                                
+        
+        
+        <Resistance>560</Resistance>
+                                
+        
+        
+        <TXRX>0</TXRX>
+                              
+      
+      
+      </TsInfo>
+                        
+      
+      
+      <CFC>0</CFC>
+                      
+    
+    
+    </TouchIFSetting>
+              
+  
+  
+  </TemplateInfoTable>
+        
+  
+  
+  <MethodInfoTable>
+                
+    
+    
+    <MethodSetting>
+                        
+      
+      
+      <Name>config01</Name>
+                        
+      
+      
+      <TifInfo>
+                                
+        
+        
+        <TouchIFID>0</TouchIFID>
+                                
+        
+        
+        <TouchIFID>1</TouchIFID>
+                                
+        
+        
+        <TouchIFID>2</TouchIFID>
+                              
+      
+      
+      </TifInfo>
+                        
+      
+      
+      <EnableAutoSensing>false</EnableAutoSensing>
+                        
+      
+      
+      <EnableMultipleElectrodeConnection>false</EnableMultipleElectrodeConnection>
+                      
+    
+    
+    </MethodSetting>
+              
+  
+  
+  </MethodInfoTable>
+      
+  
+
+  
+
+  <ParameterDataTable>
+    <TunedData>
+      <MethodID>0</MethodID>
+      <TouchIFID>0</TouchIFID>
+      <TouchIFType>1</TouchIFType>
+      <Capacitance>19.222221</Capacitance>
+      <DrivePulseFrequency>2.0</DrivePulseFrequency>
+      <Threshold>1494</Threshold>
+      <Hysteresis>74</Hysteresis>
+      <ScanTime>0.128</ScanTime>
+      <CTSUSSDIV>0</CTSUSSDIV>
+      <CTSUSNUM>7</CTSUSNUM>
+      <CTSUSO>216</CTSUSO>
+      <CTSUSDPA>7</CTSUSDPA>
+    </TunedData>
+    <TunedData>
+      <MethodID>0</MethodID>
+      <TouchIFID>1</TouchIFID>
+      <TouchIFType>1</TouchIFType>
+      <Capacitance>15.097222</Capacitance>
+      <DrivePulseFrequency>2.0</DrivePulseFrequency>
+      <Threshold>1341</Threshold>
+      <Hysteresis>67</Hysteresis>
+      <ScanTime>0.128</ScanTime>
+      <CTSUSSDIV>0</CTSUSSDIV>
+      <CTSUSNUM>7</CTSUSNUM>
+      <CTSUSO>143</CTSUSO>
+      <CTSUSDPA>7</CTSUSDPA>
+    </TunedData>
+    <TunedData>
+      <MethodID>0</MethodID>
+      <TouchIFID>2</TouchIFID>
+      <TouchIFType>1</TouchIFType>
+      <Capacitance>18.854166</Capacitance>
+      <DrivePulseFrequency>2.0</DrivePulseFrequency>
+      <Threshold>1307</Threshold>
+      <Hysteresis>65</Hysteresis>
+      <ScanTime>0.128</ScanTime>
+      <CTSUSSDIV>0</CTSUSSDIV>
+      <CTSUSNUM>7</CTSUSNUM>
+      <CTSUSO>197</CTSUSO>
+      <CTSUSDPA>7</CTSUSDPA>
+    </TunedData>
+    <Vcc>2.4</Vcc>
+    <AdvancedTunedData>
+      <MethodID>0</MethodID>
+      <CTSUATUNE12>1</CTSUATUNE12>
+      <CTSUPOSEL>0</CTSUPOSEL>
+      <CTSUTXVSEL>0</CTSUTXVSEL>
+    </AdvancedTunedData>
+    <MultiFrequencyMeasurement>
+      <EnableAutoCorrect>true</EnableAutoCorrect>
+    </MultiFrequencyMeasurement>
+  </ParameterDataTable>
+</ConfigurationInfoTable>

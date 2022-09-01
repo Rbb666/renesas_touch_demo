@@ -1,0 +1,36 @@
+***** 2022/08/04 10:46:20 *****
+QE Version                                        :3.1.0.v20220401-0732
+Project Path                                      :D:\workspace\Github\rt-thread-master\rt-thread-sherman\bsp\renesas\ra2l1-cpk
+Configuration File                                :ra2l1cpk
+<< METHOD 0 >>
+[Button(self) 0]
+TS                                                : TS32,
+[Button(self) 1]
+TS                                                : TS33,
+[Button(self) 2]
+TS                                                : TS28,
+
+<<<< Tuning Type : Normal >>>>
+PCLKB Frequency (MHz)                             :24.000
+CTSU Operating Frequency (MHz)                    :24.000
+
+---------- Phase1 ----------
+<< METHOD 0 >>
+[TS28]
+Count Value                                       : 2353
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 16.340279
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
+[TS32]
+Count Value                                       : 2239
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 15.548611
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
+[TS33]
+Count Value                                       : 1848
+Resistance Value (ohm)                            : 560
+Parasitic Capacitance (pF)                        : 12.833333
+Sensor Drive Pulse Frequency (MHz)                : 2.0
+
