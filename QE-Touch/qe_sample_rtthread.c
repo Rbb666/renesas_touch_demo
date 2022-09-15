@@ -11,6 +11,21 @@ uint64_t button_status;
     uint16_t wheel_position[TOUCH_CFG_NUM_WHEELS];
 #endif
 
+static rt_timer_t timer1;
+rt_sem_t touch_sem = RT_NULL;
+
+static void scan_timeout(void *parameter)
+{
+    fsp_err_t err;
+    /* for [CONFIG01] configuration */
+    err = RM_TOUCH_ScanStart(g_qe_touch_instance_config01.p_ctrl);
+    if (FSP_SUCCESS != err)
+    {
+        rt_kprintf("RM_TOUCH_Open fail\n");
+        return;
+    }
+}
+
 void qe_touch_main(void *parameter)
 {
     fsp_err_t err;
@@ -26,18 +41,21 @@ void qe_touch_main(void *parameter)
     }
 
     rt_kprintf("TOUCH ScanStart\n");
+    touch_sem = rt_sem_create("tsem", 0, RT_IPC_FLAG_PRIO);
+    if (touch_sem == RT_NULL)
+    {
+        rt_kprintf("create touch semaphore failed.\n");
+        return;
+    }
+    timer1 = rt_timer_create("scan_t", scan_timeout,
+                             RT_NULL, TOUCH_SCAN_INTERVAL_EXAMPLE * RT_TICK_PER_SECOND / 1000,
+                             RT_TIMER_FLAG_PERIODIC);
+    if (timer1 != RT_NULL) rt_timer_start(timer1);
+    
     /* Main loop */
     while (true)
     {
-        /* for [CONFIG01] configuration */
-        err = RM_TOUCH_ScanStart(g_qe_touch_instance_config01.p_ctrl);
-        if (FSP_SUCCESS != err)
-        {
-            rt_kprintf("RM_TOUCH_Open fail\n");
-            return;
-        }
-        while (0 == g_qe_touch_flag) {}
-        g_qe_touch_flag = 0;
+        rt_sem_take(touch_sem, RT_WAITING_FOREVER);
 
         err = RM_TOUCH_DataGet(g_qe_touch_instance_config01.p_ctrl, &button_status, NULL, NULL);
         if (FSP_SUCCESS == err)
@@ -51,10 +69,6 @@ void qe_touch_main(void *parameter)
                 rt_pin_write(led_blu, PIN_LOW);
             }
         }
-
-        /* FIXME: Since this is a temporary process, so re-create a waiting process yourself. */
-        //rt_thread_mdelay(TOUCH_SCAN_INTERVAL_EXAMPLE);
-		R_BSP_SoftwareDelay(TOUCH_SCAN_INTERVAL_EXAMPLE, BSP_DELAY_UNITS_MILLISECONDS);
     }
 }
 

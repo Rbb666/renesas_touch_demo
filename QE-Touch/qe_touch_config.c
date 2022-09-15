@@ -39,11 +39,15 @@
 
 #include "qe_touch_config.h"
 
+#include <rtthread.h>
+
 volatile uint8_t      g_qe_touch_flag;
 volatile ctsu_event_t g_qe_ctsu_event;
+extern rt_sem_t touch_sem;
 
 void qe_touch_callback(touch_callback_args_t * p_args)
 {
+    rt_sem_release(touch_sem);
     g_qe_touch_flag = 1;
     g_qe_ctsu_event = p_args -> event;
 }
