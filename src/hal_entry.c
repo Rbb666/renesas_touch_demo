@@ -14,9 +14,24 @@
 #define LED1_PIN    "P502" /* Onboard LED pins */
 #define USER_INPUT  "P104"//"P004"
 
+rt_uint32_t led_blu;
+void touch_button_callback(uint64_t status)
+{
+    if (status)
+    {
+        rt_pin_write(led_blu, PIN_HIGH);
+    }
+    else
+    {
+        rt_pin_write(led_blu, PIN_LOW);
+    }
+}
+
 void hal_entry(void)
 {
     rt_kprintf("\nHello RT-Thread!\n");
+
+    led_blu = rt_pin_get("P501");
     rt_uint32_t led1_pin = rt_pin_get(LED1_PIN);
     while (1)
     {

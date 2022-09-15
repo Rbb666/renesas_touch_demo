@@ -14,6 +14,11 @@ uint64_t button_status;
 static rt_timer_t timer1;
 rt_sem_t touch_sem = RT_NULL;
 
+RT_WEAK void touch_button_callback(uint64_t status)
+{
+    rt_kprintf("button status callback!\n");
+}
+
 static void scan_timeout(void *parameter)
 {
     fsp_err_t err;
@@ -29,7 +34,6 @@ static void scan_timeout(void *parameter)
 void qe_touch_main(void *parameter)
 {
     fsp_err_t err;
-    rt_uint32_t led_blu = rt_pin_get("P501");
 
     /* Open Touch middleware */
     rt_kprintf("TOUCH Open\n");
@@ -60,14 +64,7 @@ void qe_touch_main(void *parameter)
         err = RM_TOUCH_DataGet(g_qe_touch_instance_config01.p_ctrl, &button_status, NULL, NULL);
         if (FSP_SUCCESS == err)
         {
-            if (button_status)
-            {
-                rt_pin_write(led_blu, PIN_HIGH);
-            }
-            else
-            {
-                rt_pin_write(led_blu, PIN_LOW);
-            }
+            touch_button_callback(button_status);
         }
     }
 }
