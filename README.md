@@ -133,7 +133,7 @@ void hal_entry(void)
 需要修改瑞萨的 BSP 外设配置或添加新的外设端口，需要用到瑞萨的 [FSP](https://www2.renesas.cn/jp/zh/software-tool/flexible-software-package-fsp#document) 配置工具。请务必按照如下步骤完成配置。配置中有任何问题可到[RT-Thread 社区论坛](https://club.rt-thread.org/)中提问。
 
 1. [下载灵活配置软件包 (FSP) | Renesas](https://www.renesas.com/cn/zh/software-tool/flexible-software-package-fsp)，请使用 FSP 3.5.0 版本
-2. 下载安装完成后，需要添加 CPK-RA6M4 开发板的官方板级支持包
+2. 下载安装完成后，需要添加 CPK-RA2L1 开发板的官方板级支持包
 > 打开[ 开发板详情页](https://www2.renesas.cn/cn/zh/products/microcontrollers-microprocessors/ra-cortex-m-mcus/cpk-ra2l1-evaluation-board#overview)，在**“软件下载”**列表中找到 **CPK-RA2L1板级支持包**，点击链接即可下载
 3. 如何将 **板级支持包**添加到 FSP 中，请参考文档[如何导入板级支持包](https://www2.renesas.cn/cn/zh/document/gde/1596896?language=zh&r=1596841)
 4. 请查看文档：[使用瑞萨 FSP 配置工具](./docs/使用瑞萨FSP配置工具.md)。在 MDK 中通过添加自定义命名来打开当前工程的 FSP 配置。
