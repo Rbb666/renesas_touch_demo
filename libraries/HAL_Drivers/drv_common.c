@@ -107,7 +107,7 @@ void rt_hw_us_delay(rt_uint32_t us)
 }
 
 /**
- * This function will initial STM32 board.
+ * This function will initial board.
  */
 RT_WEAK void rt_hw_board_init()
 {
